@@ -1,0 +1,14 @@
+tmp/
+*.save
+*.wfc*
+*.mix*
+*.xml
+*.upd
+*.exit
+*.xsf
+*.cube
+*.png
+*.pdf
+*.dat
+*.out
+!README.md
