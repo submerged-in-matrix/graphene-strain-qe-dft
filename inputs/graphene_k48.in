@@ -1,0 +1,33 @@
+&CONTROL
+    calculation = 'scf',
+    prefix = 'graphene',
+    pseudo_dir = './pseudo/',
+    outdir = './tmp/'
+/
+
+&SYSTEM 
+   ibrav = 4, 
+   celldm(1) = 4.65, !Lattice Constant 'a' in Bohr, ~2.46 Angstrom 
+   celldm(3) = 6.0, !defines c/a, c = celldm(1) * celldm(3). = 14.76A˚, the value 6 is a practical choice,from literature c below 8 A˚ causes interactions. 
+   nat = 2, 
+   ntyp = 1, 
+   ecutwfc = 50.0, 
+   ecutrho = 400.0, 
+   occupations = 'smearing',
+   smearing = 'mv', !Marzari-Vanderbilt smearing, a standard good choice
+   degauss = 0.02,
+/
+
+&ELECTRONS
+    conv_thr = 1.0d-8
+/
+
+ATOMIC_SPECIES
+C 12.011 C.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS crystal
+C 0.000000 0.000000 0.000000
+C 0.333333 0.666667 0.000000
+
+K_POINTS automatic
+48 48 1 0 0 0
