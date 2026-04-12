@@ -1,3 +1,4 @@
+# QE temporary/binary files
 tmp/
 *.save
 *.wfc*
@@ -7,8 +8,19 @@ tmp/
 *.exit
 *.xsf
 *.cube
-*.png
+
+# General ignores
 *.pdf
-*.dat
-*.out
-!README.md
+
+# But track these folders explicitly
+!results/
+!results/*.png
+!dft_data/
+!dft_data/*.out
+!dft_data/*.dat
+!dft_data/*.gnu
+!inputs/
+!inputs/*.in
+!scripts/
+!scripts/*.py
+!notes/
