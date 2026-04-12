@@ -163,14 +163,13 @@ The energy cost of strain increases quadratically (0.4 mRy at 2%, 2.1 mRy at 4%)
 graphene-strain-qe-dft/
 ├── inputs/          ← QE input files (SCF, relax, bands, post-processing)
 ├── outputs/         ← raw QE output files
+├── dft_data/        ← band data files (.gnu, .dat etc.), convergence data
 ├── pseudo/          ← pseudopotentials (C.pbe-n-kjpaw_psl.1.0.0.UPF)
-├── results/         ← plots, figures, detailed analysis notes
+├── results/         ← plots and figures
 │   ├── bands_strain_0p00.png
 │   ├── bands_strain_0p02.png
 │   ├── bands_strain_0p04.png
-│   ├── bands_comparison.png
-│   ├── band_structure_notes.md
-│   └── relaxation_notes.md
+│   └── bands_comparison.png
 ├── scripts/         ← Python plotting scripts
 ├── tmp/             ← QE working directory (not tracked)
 └── README.md
