@@ -1,4 +1,4 @@
-# Graphene under Uniaxial Strain: How Robust Is the Dirac Cone?
+# Graphene under Uniaxial Strain: How Robust Is the Dirac Cone under uniaxial strain?
 
 A first-principles DFT study using Quantum ESPRESSO (PBE) to investigate how the electronic structure of graphene — specifically the Dirac cone — responds to uniaxial tensile strain along the zigzag direction.
 
