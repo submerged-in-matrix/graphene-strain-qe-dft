@@ -126,7 +126,7 @@ Computed eigenvalues on a 21×21 grid of k-points around K = (1/3, 1/3, 0) for 4
 
 #### 20% Uniaxial Strain
 
-![20% bands](results/bands_strain_0p20.png)
+![20% bands](results/bands_strain_0p020.png)
 
 *At 20% strain, the Dirac cone is destroyed. A true gap of 2.85 eV opens at K with parabolic band edges — graphene has become an insulator.*
 
