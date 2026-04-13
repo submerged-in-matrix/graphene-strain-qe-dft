@@ -1,0 +1,6 @@
+&BANDS
+    prefix = 'graphene_0p10_2dscan',
+    outdir = './tmp/',
+    filband = 'graphene_strain_0p10_2dscan.bands.dat',
+    lsym = .false.
+/

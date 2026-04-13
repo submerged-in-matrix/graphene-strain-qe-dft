@@ -1,0 +1,94 @@
+
+     Program BANDS v.7.5 starts on 13Apr2026 at 10:14:13 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     732 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./tmp/graphene_0p04_2dscan.save/
+     file C.pbe-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  2S 2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         991     497    155               150871    53329    9251
+
+     Using Slab Decomposition
+
+
+     negative rho (up, down):  3.048E-05 0.000E+00
+     Reading collected, re-writing distributed wavefunctions
+     high-symmetry point:  0.2833 0.5038 0.0000   x coordinate   0.0000
+     high-symmetry point:  0.2833 0.6239 0.0000   x coordinate   0.1201
+     high-symmetry point:  0.2883 0.5067 0.0000   x coordinate   0.1201
+     high-symmetry point:  0.2883 0.6268 0.0000   x coordinate   0.2402
+     high-symmetry point:  0.2933 0.5096 0.0000   x coordinate   0.2402
+     high-symmetry point:  0.2933 0.6297 0.0000   x coordinate   0.3603
+     high-symmetry point:  0.2983 0.5125 0.0000   x coordinate   0.3603
+     high-symmetry point:  0.2983 0.6326 0.0000   x coordinate   0.4804
+     high-symmetry point:  0.3033 0.5154 0.0000   x coordinate   0.4804
+     high-symmetry point:  0.3033 0.6355 0.0000   x coordinate   0.6004
+     high-symmetry point:  0.3083 0.5183 0.0000   x coordinate   0.6004
+     high-symmetry point:  0.3083 0.6384 0.0000   x coordinate   0.7205
+     high-symmetry point:  0.3133 0.5212 0.0000   x coordinate   0.7205
+     high-symmetry point:  0.3133 0.6412 0.0000   x coordinate   0.8406
+     high-symmetry point:  0.3183 0.5240 0.0000   x coordinate   0.8406
+     high-symmetry point:  0.3183 0.6441 0.0000   x coordinate   0.9607
+     high-symmetry point:  0.3233 0.5269 0.0000   x coordinate   0.9607
+     high-symmetry point:  0.3233 0.6470 0.0000   x coordinate   1.0808
+     high-symmetry point:  0.3283 0.5298 0.0000   x coordinate   1.0808
+     high-symmetry point:  0.3283 0.6499 0.0000   x coordinate   1.2009
+     high-symmetry point:  0.3333 0.5327 0.0000   x coordinate   1.2009
+     high-symmetry point:  0.3333 0.6528 0.0000   x coordinate   1.3210
+     high-symmetry point:  0.3383 0.5356 0.0000   x coordinate   1.3210
+     high-symmetry point:  0.3383 0.6557 0.0000   x coordinate   1.4411
+     high-symmetry point:  0.3433 0.5385 0.0000   x coordinate   1.4411
+     high-symmetry point:  0.3433 0.6586 0.0000   x coordinate   1.5612
+     high-symmetry point:  0.3483 0.5414 0.0000   x coordinate   1.5612
+     high-symmetry point:  0.3483 0.6615 0.0000   x coordinate   1.6812
+     high-symmetry point:  0.3533 0.5442 0.0000   x coordinate   1.6812
+     high-symmetry point:  0.3533 0.6643 0.0000   x coordinate   1.8013
+     high-symmetry point:  0.3583 0.5471 0.0000   x coordinate   1.8013
+     high-symmetry point:  0.3583 0.6672 0.0000   x coordinate   1.9214
+     high-symmetry point:  0.3633 0.5500 0.0000   x coordinate   1.9214
+     high-symmetry point:  0.3633 0.6701 0.0000   x coordinate   2.0415
+     high-symmetry point:  0.3683 0.5529 0.0000   x coordinate   2.0415
+     high-symmetry point:  0.3683 0.6730 0.0000   x coordinate   2.1616
+     high-symmetry point:  0.3733 0.5558 0.0000   x coordinate   2.1616
+     high-symmetry point:  0.3733 0.6759 0.0000   x coordinate   2.2817
+     high-symmetry point:  0.3783 0.5587 0.0000   x coordinate   2.2817
+     high-symmetry point:  0.3783 0.6788 0.0000   x coordinate   2.4018
+     high-symmetry point:  0.3833 0.5616 0.0000   x coordinate   2.4018
+     high-symmetry point:  0.3833 0.6817 0.0000   x coordinate   2.5219
+
+     Plottable bands (eV) written to file graphene_strain_0p04_2dscan.bands.dat.gnu
+     Bands written to file graphene_strain_0p04_2dscan.bands.dat
+
+     BANDS        :      2.93s CPU      3.83s WALL
+
+
+   This run was terminated on:  10:14:17  13Apr2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
