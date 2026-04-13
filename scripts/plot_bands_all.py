@@ -24,9 +24,10 @@ save_dir = "results"
 os.makedirs(save_dir, exist_ok=True)
 
 strain_data = {
-    "0%": ("graphene_strain_0p00.bands.dat.gnu", -1.6591),
-    "2%": ("graphene_strain_0p02.bands.dat.gnu", -1.8001),
-    "4%": ("graphene_strain_0p04.bands.dat.gnu", -2.0146),
+    "0%":  ("dft_data/graphene_strain_0p00.bands.dat.gnu", -1.6591),
+    "2%":  ("dft_data/graphene_strain_0p02.bands.dat.gnu", -1.8001),
+    "4%":  ("dft_data/graphene_strain_0p04.bands.dat.gnu", -2.0146),
+    "20%": ("dft_data/graphene_strain_0p20.bands.dat.gnu", -2.5756),
 }
 
 pi_indices = {3, 4}
@@ -77,8 +78,16 @@ for label, (bands, ef) in data.items():
 
     if gap_meV < 1:
         cone_text = "Dirac cone\n(intact, 0 meV gap)"
-    else:
+        highlight_color = "#FFEB3B"
+        highlight_alpha = 0.25
+    elif gap_meV < 1000:
         cone_text = f"Dirac cone\n(gap ≈ {gap_meV:.0f} meV)"
+        highlight_color = "#FFEB3B"
+        highlight_alpha = 0.25
+    else:
+        cone_text = f"Gap ≈ {gap_meV/1000:.2f} eV\nDirac cone destroyed"
+        highlight_color = "#FFCDD2"
+        highlight_alpha = 0.35
 
     ax.annotate(cone_text,
                 xy=(K_pos, (e3K + e4K) / 2),
@@ -142,10 +151,11 @@ for label, (bands, ef) in data.items():
 # ══════════════════════════════════════════════════════════════
 # COMPARISON PANEL
 # ══════════════════════════════════════════════════════════════
-fig, axes = plt.subplots(1, 3, figsize=(20, 7), sharey=True)
+fig, axes = plt.subplots(2, 2, figsize=(14, 12), sharey=True, sharex=False)
+axes = axes.flatten()
 
-colors_pi = ["#2E7D32", "#D32F2F", "#1565C0"]
-colors_sigma = ["#81C784", "#EF9A9A", "#90CAF9"]
+colors_pi = ["#2E7D32", "#D32F2F", "#1565C0", "#B71C1C"]
+colors_sigma = ["#81C784", "#EF9A9A", "#90CAF9", "#FFCDD2"]
 
 for idx, (label, (bands, ef)) in enumerate(data.items()):
     ax = axes[idx]
@@ -169,12 +179,16 @@ for idx, (label, (bands, ef)) in enumerate(data.items()):
         ax.axvline(pos, color="#CCCCCC", linestyle="-", linewidth=0.6, zorder=1)
 
     cone_dk = (G2 - G1) * 0.05
-    ax.axvspan(K_pos - cone_dk, K_pos + cone_dk, color="#FFEB3B", alpha=0.25, zorder=0)
+    if gap_meV > 1000:
+        ax.axvspan(K_pos - cone_dk, K_pos + cone_dk, color="#FFCDD2", alpha=0.35, zorder=0)
+        gap_text = f"Gap: {gap_meV/1000:.2f} eV\n(cone destroyed)"
+    else:
+        ax.axvspan(K_pos - cone_dk, K_pos + cone_dk, color="#FFEB3B", alpha=0.25, zorder=0)
+        gap_text = "Gap: 0 meV" if gap_meV < 1 else f"Gap: {gap_meV:.0f} meV"
 
-    gap_text = "Gap: 0 meV" if gap_meV < 1 else f"Gap: {gap_meV:.0f} meV"
     ax.annotate(gap_text,
                 xy=(K_pos, (e3K + e4K) / 2),
-                xytext=(K_pos + 0.15, 3.5),
+                xytext=(K_pos + 0.15, 4.0),
                 fontsize=10, fontweight="bold", color=colors_pi[idx],
                 arrowprops=dict(arrowstyle="->", color=colors_pi[idx], lw=1.5),
                 ha="left",
@@ -185,13 +199,13 @@ for idx, (label, (bands, ef)) in enumerate(data.items()):
     ax.set_xlim(k[0], k[-1])
     ax.set_title(f"{label} strain", fontsize=14, fontweight="bold")
 
-    if idx == 0:
+    if idx in [0, 2]:
         ax.set_ylabel(r"$E - E_F$ (eV)", fontsize=13)
 
 axes[0].set_ylim(-22, 18)
 
 fig.suptitle("Graphene Band Structure — Dirac Cone Under Uniaxial Strain (zigzag)",
-             fontsize=15, fontweight="bold", y=1.02)
+             fontsize=15, fontweight="bold")
 plt.tight_layout()
 save_path = os.path.join(save_dir, "bands_comparison.png")
 plt.savefig(save_path, dpi=300, bbox_inches="tight")

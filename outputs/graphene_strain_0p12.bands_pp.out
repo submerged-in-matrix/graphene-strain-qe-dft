@@ -1,0 +1,56 @@
+
+     Program BANDS v.7.5 starts on 12Apr2026 at 23:56:32 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     272 MiB available memory on the printing compute node when the environment starts
+
+
+     Reading xml data from directory:
+
+     ./tmp/graphene_0p12_relax.save/
+     file C.pbe-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  2S 2P renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        1061     533    161               162353    57357    9433
+
+     Using Slab Decomposition
+
+
+     negative rho (up, down):  2.973E-05 0.000E+00
+     Reading collected, re-writing distributed wavefunctions
+     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   0.0000
+     high-symmetry point:  0.5000 0.2887 0.0000   x coordinate   0.5774
+     high-symmetry point:  0.3333 0.6235 0.0000   x coordinate   0.9514
+     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   1.6583
+
+     Plottable bands (eV) written to file graphene_strain_0p12.bands.dat.gnu
+     Bands written to file graphene_strain_0p12.bands.dat
+
+     BANDS        :      1.61s CPU      2.10s WALL
+
+
+   This run was terminated on:  23:56:35  12Apr2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

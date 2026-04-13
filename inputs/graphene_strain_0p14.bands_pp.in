@@ -1,0 +1,6 @@
+&BANDS
+    prefix = 'graphene_0p14_relax',
+    outdir = './tmp/',
+    filband = 'graphene_strain_0p14.bands.dat',
+    lsym = .false.
+/
