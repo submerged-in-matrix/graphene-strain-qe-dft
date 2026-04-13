@@ -8,7 +8,7 @@ A first-principles DFT study using Quantum ESPRESSO (PBE) to investigate how the
 
 - Apply uniaxial strain (0–20%) to the graphene lattice along the zigzag direction
 - Perform structural relaxation under each strain level to find internal atomic equilibrium
-- Compute band structures along the Γ → M → K → Γ high-symmetry path
+- Compute band structures along the Γ → M → K → Γ i.e., the high-symmetry path in Graphene
 - Track the Dirac cone at the K point and determine whether it survives, shifts, or gaps out
 - Identify the critical strain regime where the Dirac cone is destroyed using a Fermi velocity diagnostic
 - Confirm results with 2D k-scans around K to locate the actual Dirac point position
@@ -230,7 +230,7 @@ graphene-strain-qe-dft/
 
 - Quantum ESPRESSO (pw.x, bands.x)
 - Python (NumPy, Matplotlib)
-- Bash (automated strain grid pipeline)
+- Bash (automated :: strain grid pipeline and generating 2D-scans on kspace for choosen strain levels)
 - WSL (Windows Subsystem for Linux)
 
 ---
@@ -249,12 +249,10 @@ graphene-strain-qe-dft/
 ---
 
 ## Possible Extensions
-
-- Armchair strain direction — different hopping modification pattern, different merging pathway
-- Biaxial strain — preserves C₃ symmetry, Dirac cone should remain at K
-- GW corrections to check if many-body effects modify the critical strain
 - Finer 2D k-scan at 6–10% to pinpoint the exact merging strain
 - Strain-dependent Fermi velocity extraction in physical units (m/s) for transport predictions
+- Biaxial strain — preserves C₃ symmetry, Dirac cone should remain at K (wouldn't it be interesting?!!)
+- Armchair strain direction — different hopping modification pattern, different merging pathway
 
 ---
 
